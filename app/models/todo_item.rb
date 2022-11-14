@@ -5,4 +5,6 @@ class TodoItem < ApplicationRecord
     scope :by_account, lambda { |account| 
       where(:account_id => account.id)
     }
+
+    validates_presence_of :title
 end
